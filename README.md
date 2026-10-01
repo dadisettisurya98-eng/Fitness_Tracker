@@ -335,6 +335,6 @@ This fitness tracker was built to:
 
 ---
 
-**Built with ❤️ by Ruthwik**
+**Built with ❤️ by Surya**
 
-[GitHub](https://github.com/ruthwik11) | [Website](https://fitnesstracker-flame.vercel.app)
+ | [Website](https://fitnesstracker-flame.vercel.app)
