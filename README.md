@@ -1,160 +1,234 @@
-# Workout Tracker - Your Complete Training Companion
+Workout Tracker – Your Complete Training Companion
 
-A modern, cross-platform fitness tracking application built with React and Capacitor. Track your daily workouts, monitor nutrition, and visualize your progress with a beautiful newspaper-inspired interface.
+Workout Tracker is a fitness tracking application built using React and Capacitor. It is designed to help users manage their daily workouts, keep track of nutrition, and monitor their training progress over time.
 
-**Website:** [fitnesstracker-flame.vercel.app](https://fitnesstracker-flame.vercel.app)
+The application works on both web and Android and stores user data locally, so there is no need to create an account or use a backend server.
 
----
+Website: https://fitnesstracker-flame.vercel.app
 
-## ✨ Features
+Features
+Workout Tracking
 
-### 📋 **Workout Tracking**
-- 6-day training split program (Monday-Saturday with rest days)
-- Exercise tracking with sets, reps, and rest periods
-- Real-time timer for rest intervals
-- Exercise detail view with coaching tips and form guidance
-- Set completion tracking with progress visualization
+The application provides a 6-day workout program from Monday to Saturday, with rest days included in the schedule.
 
-### 🥗 **Nutrition Guide**
-- Pre-planned nutrition recommendations
-- Macro breakdowns for daily meals
-- Healthy eating guidelines
-- Integrated nutrition planning
+Users can:
 
-### 📊 **Progress Analytics**
-- Calendar view of completed workouts
-- Monthly, weekly, and yearly attendance stats
-- Training streak counter
-- Workout completion percentage
-- Visual progress charts with Recharts
+View the workout planned for each day.
 
-### 🎯 **Additional Features**
-- No authentication needed (local storage only)
-- Offline-first approach
-- Responsive design for mobile and web
-- Newspaper-inspired aesthetic UI
-- Dark theme
-- Local data persistence
+Track exercises, sets, repetitions, and rest periods.
 
----
+Use a rest timer between sets.
 
-## 🛠 Tech Stack
+Mark individual sets as completed.
 
-### Frontend
-- **React 18.3+** - UI framework
-- **Vite 5.3+** - Build tool & dev server
-- **Capacitor 8.3+** - Cross-platform framework
+View exercise details, coaching tips, and form guidance.
 
-### Styling
-- **CSS3** - Custom styling with CSS variables
-- **Responsive Design** - Mobile-first approach
+See their workout completion progress.
 
-### Data Visualization
-- **Recharts** - Charts and graphs
+Nutrition
 
-### Data Storage
-- **LocalStorage API** - Client-side data persistence
-- **No Backend** - Fully client-side application
+The app also includes a basic nutrition guide. It provides pre-planned meal recommendations along with information about daily macros and healthy eating habits.
 
-### Deployment
-- **Vercel** - Web hosting
-- **Android APK** - Mobile app packaging
+The nutrition section is intended to help users follow their workout plan along with a suitable diet.
 
----
+Progress Tracking
 
-## 📱 Platform Support
+The progress section allows users to see their training history and consistency.
 
-- ✅ **Web** - Modern browsers (Chrome, Firefox, Safari, Edge)
-- ✅ **Android** - Android 5.0+ (APK available)
+It includes:
 
+Workout attendance calendar.
 
----
+Weekly, monthly, and yearly statistics.
 
+Current workout streak.
 
+Workout completion percentage.
 
-## 🚀 Getting Started (Development)
+Charts for viewing progress over time.
 
-### Prerequisites
-- Node.js 16+ and npm/yarn
-- Java Development Kit (JDK 11+) - for Android build
-- Android Studio (optional, for Android development)
+Charts and visualizations are created using Recharts.
 
-### Installation
+Other Features
 
-1. **Clone the repository**
-```bash
+Some additional features of the application include:
+
+No login or authentication required.
+
+Data is stored locally on the device.
+
+Works without a backend.
+
+Offline-first functionality.
+
+Responsive design for mobile and desktop.
+
+Dark theme.
+
+Newspaper-inspired user interface.
+
+Local data persistence.
+
+Technologies Used
+Frontend
+
+React 18.3+
+
+Vite 5.3+
+
+Capacitor 8.3+
+
+React is used for building the user interface, while Vite is used as the development server and build tool. Capacitor is used to package the application for Android.
+
+Styling
+
+The application uses regular CSS with CSS variables for colors and other design settings.
+
+The layout is designed using a mobile-first responsive approach so that it can work on different screen sizes.
+
+Charts
+
+Recharts is used to display the progress charts and other graphical information.
+
+Storage
+
+The application uses the browser's LocalStorage API to save workout information.
+
+There is currently no backend database. All information remains on the user's device.
+
+Deployment
+
+The web version is deployed using Vercel.
+
+An Android version can also be built as an APK using Capacitor and the Android project included in the repository.
+
+Platform Support
+
+The application currently supports:
+
+Web browsers such as Chrome, Firefox, Safari, and Edge.
+
+Android devices running Android 5.0 or later.
+
+Getting Started
+Requirements
+
+Before running the project, make sure the following are installed:
+
+Node.js 16 or later
+
+npm or yarn
+
+JDK 11 or later for Android development
+
+Android Studio if you want to work directly with the Android project
+
+Installation
+
+First, clone the repository:
+
 git clone https://github.com/ruthwik11/FitnessTracker.git
 cd FitnessTracker
-```
 
-2. **Install dependencies**
-```bash
+
+Install the project dependencies:
+
 npm install
-```
 
-3. **Run development server**
-```bash
+
+Start the development server:
+
 npm run dev
-```
-The app will open at `http://localhost:3000`
 
-### Build for Production (Web)
 
-```bash
+The application will normally be available at:
+
+http://localhost:3000
+
+Building the Web Version
+
+To create a production build, run:
+
 npm run build
-```
 
-This creates optimized production files in the `dist/` folder.
 
----
+The generated production files will be placed in the dist folder.
 
-## 📂 Project Structure
+You can also preview the production build locally using:
 
-```
+npm run preview
+
+Project Structure
+
+The main project structure is organized as follows:
+
 FitnessTracker/
 ├── src/
-│   ├── components/          # React components
-│   │   ├── Workout.jsx      # Main workout display
-│   │   ├── Progress.jsx     # Progress tracking & analytics
-│   │   ├── NutritionPage.jsx # Nutrition guide
-│   │   ├── Timer.jsx        # Rest timer component
-│   │   ├── Checklist.jsx    # Exercise checklist
-│   │   ├── AttendanceCalendar.jsx # Calendar view
-│   │   ├── ExerciseDetail.jsx # Exercise details modal
-│   │   └── ui/              # UI components
+│   ├── components/
+│   │   ├── Workout.jsx
+│   │   ├── Progress.jsx
+│   │   ├── NutritionPage.jsx
+│   │   ├── Timer.jsx
+│   │   ├── Checklist.jsx
+│   │   ├── AttendanceCalendar.jsx
+│   │   ├── ExerciseDetail.jsx
+│   │   └── ui/
 │   │       ├── OrnamentDivider.jsx
 │   │       └── EditionBadge.jsx
+│   │
 │   ├── data/
-│   │   └── workoutData.js   # 6-day training program
+│   │   └── workoutData.js
+│   │
 │   ├── utils/
-│   │   └── storage.js       # LocalStorage utilities
-│   ├── main.jsx             # App entry point
-│   └── style.css            # Global styles
-├── android/                 # Android project files
-│   ├── app/                 # Android app module
-│   ├── gradle/              # Gradle files
+│   │   └── storage.js
+│   │
+│   ├── main.jsx
+│   └── style.css
+│
+├── android/
+│   ├── app/
+│   ├── gradle/
 │   └── build.gradle
-├── index.html               # HTML entry point
-├── package.json             # Dependencies & scripts
-├── vite.config.js           # Vite configuration
-├── capacitor.config.json    # Capacitor configuration
-└── README.md                # This file
-```
+│
+├── index.html
+├── package.json
+├── vite.config.js
+├── capacitor.config.json
+└── README.md
 
----
 
-## 💾 Data Storage
+The components folder contains the main React components used by the application.
 
-### How It Works
-- All data is stored locally in the browser's **LocalStorage**
-- No data is sent to any server
-- Data persists across sessions
-- Each device has its own independent data
+The workout program and nutrition information are stored in src/data/workoutData.js.
 
-### Storage Structure
-Data is organized by date in the format:
-```
-workout_YYYY-MM-DD: {
+The LocalStorage-related functions are handled inside src/utils/storage.js.
+
+The android folder contains the Android project generated and managed through Capacitor.
+
+How Data Is Stored
+
+The application does not use a server or database for storing workout information.
+
+Instead, workout data is saved in the browser's LocalStorage.
+
+This means that:
+
+Data remains available between sessions.
+
+No workout information is sent to a server.
+
+Each device has its own separate data.
+
+Clearing the browser data can remove the saved workouts.
+
+Workout information is stored using a date-based key such as:
+
+workout_YYYY-MM-DD
+
+
+A typical stored workout object looks like this:
+
+{
   date: "YYYY-MM-DD",
   day: "MONDAY",
   exercises: [
@@ -170,37 +244,56 @@ workout_YYYY-MM-DD: {
   stepsCompleted: false,
   timestamp: "ISO timestamp"
 }
-```
 
-### Storage Functions
-See `src/utils/storage.js` for utilities:
-- `saveWorkoutProgress()` - Save daily workout data
-- `loadWorkoutProgress()` - Load daily workout data
-- `getMonthlyAttendance()` - Get monthly stats
-- `getCurrentStreak()` - Get training streak
-- `clearAllData()` - Reset all data
+Storage Functions
 
-### Export Your Data
-To backup your data:
-```javascript
-// In browser console
+The storage utilities are located in:
+
+src/utils/storage.js
+
+
+Some of the main functions include:
+
+saveWorkoutProgress() – saves the current workout progress.
+
+loadWorkoutProgress() – loads previously saved workout data.
+
+getMonthlyAttendance() – calculates monthly workout statistics.
+
+getCurrentStreak() – calculates the current training streak.
+
+clearAllData() – removes all saved workout data.
+
+Backing Up Data
+
+Since the application uses LocalStorage, users can manually export their workout data from the browser console.
+
+For example:
+
 const allData = {};
+
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
+
   if (key.startsWith('workout_')) {
     allData[key] = localStorage.getItem(key);
   }
 }
+
 console.log(JSON.stringify(allData));
-```
 
----
 
-## 🎨 Customization
+The output can then be saved somewhere as a backup.
 
-### Modifying the Training Program
-Edit `src/data/workoutData.js`:
-```javascript
+Customizing the Workout Program
+
+The training program can be changed by editing:
+
+src/data/workoutData.js
+
+
+For example:
+
 export const workoutData = {
   MONDAY: {
     day: 'MONDAY',
@@ -212,129 +305,166 @@ export const workoutData = {
         name: 'Barbell Bench Press',
         sets: 4,
         reps: '6-8',
-        rest: 180,
-        // ... more details
+        rest: 180
       }
     ]
-  },
-  // ... other days
+  }
 };
-```
 
-### Customizing Nutrition
-Edit `src/data/workoutData.js` - `nutritionPlan` export
 
-### Styling
-- Colors: Edit CSS variables in `src/style.css`
-- Layout: Modify component JSX files
-- Theme: Update color scheme in `style.css`
+Other workout days can be modified in the same file.
 
----
+The nutrition plan is also stored in workoutData.js and can be changed there.
 
-## 🔧 Available Scripts
+Customizing the Design
 
-```bash
-# Development
-npm run dev           # Start dev server
+Most of the visual styling is handled in:
 
-# Production
-npm run build         # Build for production
-npm run preview       # Preview production build locally
+src/style.css
 
-# Android
-npm run android:build # Build web + sync with Android
-npm run android:open  # Open Android Studio
 
-# Code Quality
-npm run lint         # Run ESLint
-```
+Colors can be changed through the CSS variables.
 
----
+The layout and individual components can be modified by editing the corresponding JSX files inside the src/components folder.
 
-## 🚀 Deployment
+The overall theme can also be changed by modifying the colors and other styles in style.css.
 
-### Web (Vercel)
-```bash
-# Install Vercel CLI
+Available Commands
+Development
+npm run dev
+
+
+Starts the development server.
+
+Production Build
+npm run build
+
+
+Creates the production version of the web application.
+
+Preview
+npm run preview
+
+
+Runs the production build locally for testing.
+
+Android
+npm run android:build
+
+
+Builds the web application and syncs it with the Android project.
+
+npm run android:open
+
+
+Opens the Android project in Android Studio.
+
+Linting
+npm run lint
+
+
+Runs ESLint to check the source code.
+
+Android Development
+
+The project includes an Android application inside the android directory.
+
+Capacitor is used to connect the React application with the Android platform.
+
+After making changes to the web application, the Android project can be updated using the Android build command.
+
+Android Studio can then be used to build and test the application on an emulator or physical device.
+
+Deployment
+
+The web application can be deployed to Vercel.
+
+One way to deploy it is by installing the Vercel CLI:
+
 npm i -g vercel
 
-# Deploy
+
+Then run:
+
 vercel
-```
-
----
-
-## 🔒 Security & Privacy
-
-✅ **Privacy First**
-- No user authentication required
-- No data transmitted to servers
-- All data stored locally on device
-- No tracking or analytics
-
-⚠️ **Limitations**
-- Data not backed up to cloud
-- Data lost if browser cache is cleared
-- No data sync across devices
-
----
-
-## 🐛 Troubleshooting
-
-### Data not saving?
-- Check if LocalStorage is enabled in browser
-- Clear browser cache and try again
-- Check browser console for errors
 
 
+The project can also be connected to a Git repository and deployed automatically through Vercel.
 
-### Port 3000 already in use?
-Edit `vite.config.js`:
-```javascript
+Privacy and Security
+
+The application is designed to keep user workout data on the device.
+
+There is no user authentication system and no backend database.
+
+The application does not send workout information to a remote server and does not currently include tracking or analytics.
+
+There are some limitations because the data is stored locally. For example, clearing browser storage can remove the saved workout history, and data does not automatically synchronize between different devices.
+
+Troubleshooting
+Workout data is not being saved
+
+If workout information is not being saved, check that LocalStorage is enabled in the browser.
+
+You can also open the browser developer console and check for JavaScript errors.
+
+If necessary, clear the browser cache and try again.
+
+Port 3000 is already being used
+
+If another application is already using port 3000, the Vite configuration can be changed.
+
+Open vite.config.js and change the port:
+
 server: {
-  port: 3001  // Change to different port
+  port: 3001
 }
-```
-
----
 
 
-## 📝 License
+After changing the port, restart the development server.
 
-This project is open source and available for personal and educational use.
+Contributing
 
----
+Contributions are welcome.
 
-## 🤝 Contributing
+Developers can contribute by:
 
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest features
-- Submit pull requests
-- Improve documentation
+Reporting bugs.
 
----
+Suggesting new features.
 
-## 📧 Support
+Improving the existing UI.
 
-For issues or questions:
-- Open a GitHub issue
-- Check existing documentation
-- Review code comments
+Submitting pull requests.
 
----
+Improving documentation.
 
-## 🎯 Project Goals
+Fixing issues in the code.
 
-This fitness tracker was built to:
-- ✅ Help users stay consistent with their training
-- ✅ Provide a distraction-free workout experience
-- ✅ Track progress without requiring sign-ups
-- ✅ Work offline without backend dependencies
-- ✅ Deliver a beautiful, intuitive interface
+Project Goals
 
----
+The main goal of Workout Tracker is to provide a simple and distraction-free way to stay consistent with training.
 
-**Built with ❤️ by Surya**
+The application was designed around a few main ideas:
 
- | [Website](https://fitnesstracker-flame.vercel.app)
+Help users maintain consistency with their workouts.
+
+Make workout tracking quick and simple.
+
+Allow users to track progress without creating an account.
+
+Keep the application usable without a backend.
+
+Store information locally on the user's device.
+
+Provide a clean and visually different interface.
+
+License
+
+This project is open source and intended for personal and educational use.
+
+Support
+
+If you find a problem with the application or have a question about the project, you can open an issue in the GitHub repository or review the existing documentation and source code.
+
+Built with ❤️ by Surya
